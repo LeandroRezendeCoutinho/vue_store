@@ -52,6 +52,7 @@ group :development, :test do
   gem 'ruby-lsp-rspec', require: false
   gem 'ruby-lsp-rubyfmt'
   gem 'rubocop'
+  gem 'rspec-rails', '~> 8.0.0'
 end
 
 group :development do
