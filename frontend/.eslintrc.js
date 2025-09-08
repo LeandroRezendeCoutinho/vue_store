@@ -16,5 +16,8 @@ module.exports = {
     browser: true,
     node: true,
     es6: true
+  },
+  rules: {
+    'vue/multi-word-component-names': 'off' // Disable the rule globally
   }
 };
