@@ -1,19 +1,36 @@
 <template>
   <div id="app">
-    <Header></Header>
-    
+    <AppLoader v-if="isLoading" />
+    <AppNotification
+      v-if="notification.show"
+      :message="notification.message"
+      :type="notification.type"
+    />
+    <main>
+      <router-view />
+    </main>
   </div>
 </template>
 
 <script>
-import Header from './components/Header.vue';
+import AppLoader from "./components/AppLoader.vue";
+import AppNotification from "./components/AppNotification.vue";
 
 export default {
-  name: 'App',
+  name: "App",
+  data: () => ({
+    isLoading: false,
+    notification: {
+      show: false,
+      message: "",
+      type: "",
+    },
+  }),
   components: {
-    Header
-  }
-}
+    AppLoader: AppLoader,
+    AppNotification: AppNotification,
+  },
+};
 </script>
 
 <style>
