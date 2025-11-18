@@ -1,7 +1,7 @@
 <template>
     <div class="header">
         <brand></brand>
-        <search></search>
+        <search-bar></search-bar>
         <nav-bar></nav-bar>
     </div>
 </template>
@@ -9,13 +9,13 @@
 <script>
 
 import Brand from './Brand.vue'
-import Search from './Search.vue'
+import SearchBar from './SearchBar.vue'
 import NavBar from './NavBar.vue'
 
 export default {
     components: {
         Brand,
-        Search,
+        SearchBar,
         NavBar
     }
 }
