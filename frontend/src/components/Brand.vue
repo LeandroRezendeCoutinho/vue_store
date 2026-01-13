@@ -1,6 +1,6 @@
 <template>
     <div class="brand">
-        <img src="../assets/logo.png" alt="Logo" class="logo" width="50" height="50"/>
+        <img src="../assets/logo.png" alt="Logo" class="logo"/>
         <span class="brand-name"><slot>Vue store</slot></span>
     </div>
 </template>
@@ -14,11 +14,18 @@ export default {
 <style>
 .brand {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    text-align: center;
 }
+
 .logo {
-    margin-right: 10px;
+    width: 75px;
+    height: 75px;
+    margin-bottom: -24px;
 }
+
 .brand-name {
     font-size: 1.5em;
     font-weight: bold;
